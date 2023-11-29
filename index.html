@@ -9,13 +9,6 @@
                 box-sizing: border-box;
             }
 
-            @media only screen and (max-width: 600px) {
-                /* For mobile phones: */
-                [class*="box-"] {
-                width: 100%;    
-                }
-            }
-
             body {
                 background-image: linear-gradient(to right, rgb(0, 7, 14), rgb(0, 5, 10));
                 margin: 0;
@@ -157,10 +150,21 @@
             .blank-box {
                 margin-top: 200px;
             }
-
         </style>
     </head>
     <body>
+        <script>
+            document.addEventListener("orientationchange", function(event){
+    switch(window.orientation) 
+    {  
+        case -90: case 90:
+            /* Device is in landscape mode */
+            break; 
+        default:
+            /* Device is in portrait mode */
+    }
+});
+        </script>
         <div class="nav-container">
             <a href="#menu1" style="background-color: rgb(30, 30, 50);">O que são?</a>
             <a href="#menu2" style="background-color: rgb(40, 40, 60);">Como Ingressar</a>
