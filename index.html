@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
+        <title>Computação Quântica</title>
+        <style>
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                background-image: linear-gradient(to right, rgb(0, 7, 14), rgb(0, 5, 10));
+                margin: 0;
+                margin-bottom: 100px;
+            }
+
+            h2 {
+                color: white;
+                font-weight: 1;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin-top: -20px;
+                margin-bottom: 150px;
+            }
+
+            li {
+                color: wheat;
+            }
+
+            .nav-container {
+                position: fixed;
+                display: flex;
+                background-color: red;
+                text-align: center;
+                top: 0;
+                line-height: 51px;
+                width: 100%;
+                height: 51px;
+            }
+
+            .nav-container > a {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: white;
+                font-size: 21px;
+                width: 20%;
+                height: 51px;
+                z-index: 999;
+            }
+
+            .header {
+                color: white;
+                font-weight: bold;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-align: center;
+                margin-top: 73px;
+            }
+
+            .header > h2 {
+                font-size: 20px;
+                margin-bottom: 120px;
+            }
+
+            .container {
+                display: grid;
+                text-align: center;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+            }
+
+            .container > h2 {
+                color: white;
+                font-weight: bold;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 24px;
+                grid-column-start: 5;
+                grid-column-end: 8;
+            }
+
+            .container > ol {
+                justify-self: left;
+                width: 200%;
+                background-color: red;
+            }
+
+            .box-left {
+                background-image: linear-gradient(to bottom, rgb(17, 17, 17), rgb(24, 24, 31));
+                margin-right: 80px;
+                grid-column-start: 3;
+                grid-column-end: 7;
+                border-width: 5px;
+                border-style: solid;
+            }
+
+            .box-left > h1 {
+                color: white;
+                font-weight: bold;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+                font-size: 21px;
+            }
+
+            .box-left > p, h2 {
+                color: white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin: auto;
+                font-size: 19px;
+                margin-bottom: 10px;
+            }
+
+            .box-left > a {
+                color: rgb(60, 140, 255);
+                font-weight: bold;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 16px;
+            }
+
+            .box-left:hover {
+                scale: 1.05;
+                transition: 0.14s;
+            }
+
+            .box-right {
+                background-image: linear-gradient(to bottom, rgb(17, 17, 17), rgb(24, 24, 31));
+                margin-left: 80px;
+                grid-column-start: 3;
+                grid-column-end: 7;
+                border-width: 5px;
+                border-style: solid;
+            }
+
+            .box-right > h1 {
+                color: white;
+                font-weight: bold;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 21px;
+            }
+
+            .box-right > p, h2 {
+                color: white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin: auto;
+                font-size: 19px;
+                margin-bottom: 10px;
+            }
+
+            .box-right:hover {
+                scale: 1.05;
+                transition: 0.14s;
+            }
+
+            .blank-box {
+                margin-top: 200px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="nav-container">
+            <a href="#menu1" style="background-color: rgb(30, 30, 50);">O que são?</a>
+            <a href="#menu2" style="background-color: rgb(40, 40, 60);">Como Ingressar</a>
+            <a href="#menu3" style="background-color: rgb(50, 50, 70);">Aplicações</a>
+            <a href="#menu4" style="background-color: rgb(50, 50, 60);">Desafios</a>
+            <a href="#menu5" style="background-color: rgb(50, 40, 50);">Artigos</a>
+        </div>
+        <div class="header">
+            <h1>Computadores Quânticos:</h1>
+            <h2>São computadores capazes de processar volumes de dados exorbitantes que um
+                computador comum não poderia através de algoritmos quânticos.
+            </h2>
+            <img src="img1.webp" style="width: 320px; margin-top: -105px;">
+        </div>
+        <br>
+        <div class="container">
+            <br>
+            <div class="box-left" id="menu1" style="background-color: rgb(91, 13, 107); border-color: rgb(91, 13, 107);">
+                <h1 style="background-color: rgb(91, 13, 107);">Como um computador quântico funciona?</h1>
+                <h2>Diferente dos computadores comuns, os computadores quânticos utilizam qubits ao invés de bits
+                    para processar informações. O grande diferencial é que qubits podem assumir mais de um valor
+                    mesmo tempo, enquanto bits só podem ser 1 ou 0; Além disso, não são impulsos elétricos que passam
+                por transistores e sim partículas subatômicas, permitindo 2 funções: a Sobreposição e o Entrelaçamento.</h2>
+            </div>
+            <div class="blank-box"></div>
+            <div class="box-right" style="background-color: rgb(45, 6, 90); border-color: rgb(45, 6, 90); text-align: left;">
+                <h1 style="background-color: rgb(45, 6, 90);">Vantagens e Desvantagens:</h1>
+                <p style="color: yellowgreen">— Capaz de executar algoritmos extremamente complexos.</p>
+                <p style="color: rgb(192, 43, 43);">— Mas é pior em executar algoritmos simples que um computador comum poderia executar.</p>
+                <p style="color: yellowgreen">— Capaz de analisar fenômenos fisícos com mais precisão.</p>
+                <p style="color: rgb(192, 43, 43);">— Mas depende de condições perfeitas para funcionar sem falhas.</p>
+            </div>
+            <div class="blank-box"></div>
+            <div class="box-left" id="menu2" style="background-color: rgb(6, 14, 90); border-color: rgb(6, 14, 90);">
+                <h1 style="background-color: rgb(6, 14, 90);">Como ingressar na área?</h1>
+                <h2>Adquirindo uma formação acadêmica em um curso relacionado à computação quântica, como a ciência da computação,
+                    engenharia quântica, etc.
+                </h2>
+            </div>
+            <div class="blank-box"></div>
+            <div class="box-right" id="menu3" style="background-color: rgb(6, 66, 90); border-color: rgb(6, 66, 90);">
+                <h1 style="background-color: rgb(6, 66, 90);">Impacto no mercado e na ciência:</h1>
+                <h2>Na indústria farmacêutica os computadores quânticos já são utilizados em pesquisas de DNA e genética. Também
+                    já vem sendo utilizado por redes de comunicação quanto ao deslocamento da conexão, auxiliando em encontrar sempre 
+                    os caminhos mais rápidos.
+                </h2>
+            </div> 
+             <div class="blank-box"></div>
+            <div class="box-left" id="menu4" style="background-color: rgb(6, 90, 10); border-color: rgb(6, 90, 10); text-align: left;">
+                <h1 style="background-color: rgb(6, 90, 10);">Desafios a serem superados:</h1>
+                <h2>— Desenvolvimento de novos algoritmos.</h2>
+                <h2>— Impossibilidade de uso fora de um laboratório.</h2>
+                <h2>— Instábilidade devido a variação de temperatura.</h2>
+            </div>
+            <div class="blank-box"></div>
+            <div class="blank-box"></div>
+            <div class="box-left" id="menu5" style="background-color: rgb(175, 102, 19); border-color: rgb(175, 102, 19);">
+                <h1 style="background-color: rgb(175, 102, 19);">Mais artigos:</h1>
+                <h2>Quer ler mais sobre isso? Confira:</h2>
+                <a href="https://medium.com/@filipe.chagas/uma-introdu%C3%A7%C3%A3o-%C3%A0-matem%C3%A1tica-da-computa%C3%A7%C3%A3o-qu%C3%A2ntica-22763e797b8d">
+                    • Matemática da Computação Quântica
+                </a>
+                <br>
+                <a href="https://brasilescola.uol.com.br/fisica/computacao-quantica.htm">
+                    • O que é e como funciona
+                </a>
+                <br>
+                <a href="https://www.meupositivo.com.br/panoramapositivo/computadores-quanticos/#:~:text=Os%20primeiros%20prot%C3%B3tipos%20de%20computador,de%20processamento%20de%2016%20qubits.">
+                    • A história da Computação Quântica
+                </a>
+            </div>   
+        </div>
+    </body>
+</html>
