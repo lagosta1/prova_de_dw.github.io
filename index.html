@@ -196,7 +196,7 @@
                     color: rgb(60, 140, 255);
                     font-weight: bold;
                     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                    font-size: 36px;
+                    font-size: 16px;
                 }
 
                 .box-left:hover {
@@ -225,6 +225,15 @@
                     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                     margin: auto;
                     font-size: 19px;
+                    margin-bottom: 10px;
+                }
+
+                .box-right > h3 {
+                    color: white;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    margin: auto;
+                    font-size: 19px;
+                    margin-top: -10px;
                     margin-bottom: 10px;
                 }
             }
@@ -308,7 +317,47 @@
                     |11> se torna |10>.</h2>
                 <h2>Mas caso seja 0, os valores se mantém os mesmos.</h2>
                 <h2>É possivel visualizar esse processo achando o produto tensorial entre as matrizes de cada cbit (que são vetores).</h2>
-                <img src="img1.png">
+                <img src="img1.png" style="width: 100%;">
+                <h2>E na verdade, esse tempo todo não estavamos utilizando bits, mas sim QUBITS! Os cbits são só simplificações dos qubits, visto
+                    que só utilizamos números reais (0 e 1), enquanto os qbits podem utilizar números complextos (contanto que a soma dos 2 valores vetoriais seja sempre 1).
+                </h2>
+                <br>
+                <h2>Aqui entramos na parte mais complicada dos Computadores Quânticos: A Superposição.</h2>
+                <h2>Como dito antes, os qbits podem ter qualquer valor contanto que a soma seja sempre 1, ou seja: Não são 0 e nem 1, e sim todos os valores
+                    ao mesmo tempo. O qubit só vai ter um valor definitivo quando for processado, podendo ser tanto 0 quanto 1, mas ele não decide em qual valor cair por acaso, é
+                aleatório:</h2>
+                <h3>A soma dos valores vetoriais do qubit devem sempre 1 pois elas determinam a chance de um qubit ser 0 ou 1:</h3>
+                <h2>Se pensarmos num vetor como uma lista a ser indexada fica mais fácil: Um qubit com valor de |10> sempre será "0", já
+                    que o seu primeiro valor, que representa o 0, é 1. Agora, se fosse por exemplo: |1/√2 / 1/√2>, haveria uma chance de 50%
+                    de ser tanto 0 quanto 1, já que 1/√2 é 0,5.
+                </h2>
+                <h2>Absolutamente todos os qubits precisam estar nesse estados de Superposição para que o computador funcione, e para colocar um qubit
+                    nesse estado é preciso que ele passe por um Portão Lógico (Logic Gate), o mais utilizado é o</h2>
+                <h3>Hadamard Gate:</h3>
+                <h2>O Hadamard Gate multiplica o vetor do qubit por uma segunda matriz, que resulta na Superposição equivalente ao valor do qubit:</h2>
+                <img src="img2.png" style="width: 100%;">
+                <h2>É importante dizer que apenas o último valor da matriz do Hadamard Gate é negativo devido a forma como as multiplicações
+                    de matrizes funcionam, apenas o segundo valor do qubit vai ser múltiplicado pelo valor negativo, tendo assim a possibilidade de ser flippado, enquanto
+                    o primeiro valor se manterá o mesmo, afinal, apenas o Target bit pode receber alterações.
+                </h2>
+                <h2>E por último, é preciso entender o</h2>
+                <h3>Deustch Oracle:</h3>
+                <h2>É um experimento em que um "input" entra em uma caixa preta, que realiza uma operação desconhecida em um bit e devolve o resultado pelo "output".
+                    Em Computadores Clássicos só é possível identificar a operação sendo realizada através da entrada (input) de 2 bits: um 0 e um 1.
+                    Computadores Quânticos também precisam de 2 entradas, mas as operações que vimos antes não servem em Computadores Quânticos, já que não são reversíveis.
+                    Então para resolver isso, é feito um "truque".
+                </h2>
+                <h2>Ele mantém o valor de entrada do qubit o mesmo, mas cria um segundo valor com o resultado do valor alterado após a operação ser realizada:</h2>
+                <img src="img3.png" style="width: 100%;">
+                <h2>Assim ele transforma as operações "não reversíveis" em "reversíveis", já que o valor de antes da operação não foi modificado, ele ainda existe.</h2>
+                <img src="img4.png" style="width: 100%;">
+                <h2>Tanto o Input quanto o Output são iniciados e tem seus valores flippados, depois passam pelo Hadamard Gate (e entram em Superposição), passam pela operação dentro da caixa preta, passam
+                    pelo Hadamard Gate mais uma vez (para entrar em Superposição novamente) e finalmente são processados.
+                </h2>
+                <h2>Através de uma Notação Circular fica mais fácil de visualizar os processos e qual valor o qubit assume durante cada etapa:</h2>
+                <img src="img5.png" style="width: 100%;">
+                <h2>Nesse caso específico, a operação secreta dentro da caixa era de Identity, mas o mesmo pode ser feito com as outras 3.</h2>
+                <h3>E acabamos! Isso é um resumo do circuito de um Computador Quântico e como ele processa informação em relação a um Computador Clássico.</h3>
             </div> 
             <div class="blank-box"></div>
             <div class="box-left" id="menu5" style="background-color: rgb(175, 102, 19); border-color: rgb(175, 102, 19);">
