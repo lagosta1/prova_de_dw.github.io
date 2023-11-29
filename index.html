@@ -9,8 +9,6 @@
                 box-sizing: border-box;
             }
 
-            @media only screen and (min-width: 1200px) {
-
             body {
                 background-image: linear-gradient(to right, rgb(0, 7, 14), rgb(0, 5, 10));
                 margin: 0;
@@ -28,7 +26,6 @@
             li {
                 color: wheat;
             }
-
             .nav-container {
                 position: fixed;
                 display: flex;
@@ -83,6 +80,17 @@
                 width: 200%;
                 background-color: red;
             }
+
+            .box-right:hover {
+                scale: 1.05;
+                transition: 0.14s;
+            }
+
+            .blank-box {
+                margin-top: 200px;
+            }
+
+            @media only screen and (min-width: 1200px) {
 
             .box-left {
                 background-image: linear-gradient(to bottom, rgb(17, 17, 17), rgb(24, 24, 31));
@@ -144,14 +152,68 @@
                 margin-bottom: 10px;
             }
 
-            .box-right:hover {
+            @media only screen and (max-width: 1200px) {
+
+            .box-left {
+                background-image: linear-gradient(to bottom, rgb(17, 17, 17), rgb(24, 24, 31));
+                margin-right: 20px;
+                grid-column-start: 1;
+                grid-column-end: 8;
+                border-width: 5px;
+                border-style: solid;
+            }
+
+            .box-left > h1 {
+                color: white;
+                font-weight: bold;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+                font-size: 11px;
+            }
+
+            .box-left > p, h2 {
+                color: white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin: auto;
+                font-size: 9px;
+                margin-bottom: 10px;
+            }
+
+            .box-left > a {
+                color: rgb(60, 140, 255);
+                font-weight: bold;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 6px;
+            }
+
+            .box-left:hover {
                 scale: 1.05;
                 transition: 0.14s;
             }
 
-            .blank-box {
-                margin-top: 200px;
+            .box-right {
+                background-image: linear-gradient(to bottom, rgb(17, 17, 17), rgb(24, 24, 31));
+                margin-left: 20px;
+                grid-column-start: 1;
+                grid-column-end: 8;
+                border-width: 5px;
+                border-style: solid;
             }
+
+            .box-right > h1 {
+                color: white;
+                font-weight: bold;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 11px;
+            }
+
+            .box-right > p, h2 {
+                color: white;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin: auto;
+                font-size: 9px;
+                margin-bottom: 10px;
+            }
+        }
         }
         </style>
     </head>
@@ -166,7 +228,7 @@
         <div class="header">
             <h1>Computadores Quânticos:</h1>
             <h2>São computadores capazes de processar volumes de dados exorbitantes que um
-                computador comum não poderia através de algoritmos quânticos. (V11)
+                computador comum não poderia através de algoritmos quânticos. (V12)
             </h2>
         </div>
         <br>
