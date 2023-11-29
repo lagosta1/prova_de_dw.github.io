@@ -9,6 +9,13 @@
                 box-sizing: border-box;
             }
 
+            @media only screen and (max-width: 600px) {
+                /* For mobile phones: */
+                [class*="box-"] {
+                width: 100%;    
+                }
+            }
+
             body {
                 background-image: linear-gradient(to right, rgb(0, 7, 14), rgb(0, 5, 10));
                 margin: 0;
@@ -20,7 +27,7 @@
                 font-weight: 1;
                 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 margin-top: -20px;
-                margin-bottom: 150px;
+                margin-bottom: 10%;
             }
 
             li {
