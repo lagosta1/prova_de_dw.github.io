@@ -15,6 +15,20 @@
                 margin-bottom: 100px;
             }
 
+            .header {
+                color: white;
+                font-weight: bold;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-align: center;
+                margin-top: 73px;
+            }
+
+            .header > h2 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+
             h2 {
                 color: white;
                 font-weight: 1;
@@ -26,6 +40,7 @@
             li {
                 color: wheat;
             }
+            
             .nav-container {
                 position: fixed;
                 display: flex;
@@ -46,22 +61,9 @@
                 z-index: 999;
             }
 
-            .header {
-                color: white;
-                font-weight: bold;
-                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                text-align: center;
-                margin-top: 73px;
-            }
-
-            .header > h2 {
-                font-size: 20px;
-                margin-bottom: 120px;
-            }
-
             .container {
                 display: grid;
-                text-align: center;
+                text-align: left;
                 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
             }
@@ -152,6 +154,16 @@
                     font-size: 19px;
                     margin-bottom: 10px;
                 }
+
+                .box-right > h3 {
+                    color: white;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    margin: auto;
+                    font-size: 19px;
+                    margin-top: -10px;
+                    margin-bottom: 10px;
+                }
+
             }
 
             @media only screen and (max-width: 1200px) {
@@ -230,14 +242,14 @@
         <div class="header">
             <h1>Computadores Quânticos:</h1>
             <h2>São computadores capazes de processar volumes de dados exorbitantes que um
-                computador comum não poderia através de algoritmos quânticos. (V14)
+                computador comum não poderia através de algoritmos quânticos. (V15)
             </h2>
         </div>
         <br>
         <div class="container">
             <br>
             <div class="box-left" id="menu1" style="background-color: rgb(91, 13, 107); border-color: rgb(91, 13, 107);">
-                <h1 style="background-color: rgb(91, 13, 107);">Como um computador quântico funciona?</h1>
+                <h1 style="background-color: rgb(91, 13, 107);">Como um Computador Quântico Qunciona?</h1>
                 <h2>Diferente dos computadores comuns, os computadores quânticos utilizam qubits ao invés de bits
                     para processar informações. O grande diferencial é que qubits podem assumir mais de um valor
                     mesmo tempo, enquanto bits só podem ser 1 ou 0; Além disso, não são impulsos elétricos que passam
@@ -253,14 +265,14 @@
             </div>
             <div class="blank-box"></div>
             <div class="box-left" id="menu2" style="background-color: rgb(6, 14, 90); border-color: rgb(6, 14, 90);">
-                <h1 style="background-color: rgb(6, 14, 90);">Como ingressar na área?</h1>
+                <h1 style="background-color: rgb(6, 14, 90);">Como Ingressar na Área?</h1>
                 <h2>Adquirindo uma formação acadêmica em um curso relacionado à computação quântica, como a ciência da computação,
                     engenharia quântica, etc.
                 </h2>
             </div>
             <div class="blank-box"></div>
             <div class="box-right" id="menu3" style="background-color: rgb(6, 66, 90); border-color: rgb(6, 66, 90);">
-                <h1 style="background-color: rgb(6, 66, 90);">Impacto no mercado e na ciência:</h1>
+                <h1 style="background-color: rgb(6, 66, 90);">Impacto no Mercado e na Ciência:</h1>
                 <h2>Na indústria farmacêutica os computadores quânticos já são utilizados em pesquisas de DNA e genética. Também
                     já vem sendo utilizado por redes de comunicação quanto ao deslocamento da conexão, auxiliando em encontrar sempre 
                     os caminhos mais rápidos.
@@ -268,22 +280,42 @@
             </div> 
              <div class="blank-box"></div>
             <div class="box-left" id="menu4" style="background-color: rgb(6, 90, 10); border-color: rgb(6, 90, 10); text-align: left;">
-                <h1 style="background-color: rgb(6, 90, 10);">Desafios a serem superados:</h1>
+                <h1 style="background-color: rgb(6, 90, 10);">Desafios a Serem Superados:</h1>
                 <h2>— Desenvolvimento de novos algoritmos.</h2>
                 <h2>— Impossibilidade de uso fora de um laboratório.</h2>
                 <h2>— Instábilidade devido a variação de temperatura.</h2>
             </div>
             <div class="blank-box"></div>
+            <div class="box-right" id="menu3" style="background-color: rgb(126, 167, 13); border-color: rgb(126, 167, 13);">
+                <h1 style="background-color: rgb(126, 167, 13);">A Matemática dos Computadores Quânticos:</h1>
+                <h2>Antes de começar a explicação, é importante que você esteja ciente de que aqui bits (cbits) não serão representados como números, mas
+                    sim vetores, em que:</h2>
+                <h3>• |0> é escrito como (1, 0)</h3>
+                <h3>• |1> é escrito como (0, 1)</h3>
+                <h2>Também é importante saber que na computação clássica existem 4 operações que podem ser realizadas para modificar o valor de um bit: 
+                <h3>• Identity: Preserva o valor do bit.</h3>
+                <h3>• Negation: Inverte o valor do bit.</h3>
+                <h3>• Constant-0: Muda o valor do bit para 0.</h3>
+                <h3>• Constant-1: Muda o valor do bit para 1.</h3>
+                <h2>Sendo que: Dessas 4 operações, as que mudam o valor do bit (Identity e Negation) são reversíveis, e as que 
+                    sobrescrevem o valor do bit (Constant) não são reversíveis.</h2>
+                <h2>Computadores Quânticos são limitados a usar apenas as operações reversíveis, ou seja, apenas Negation (embora Identity também
+                    possa ser usado, mas é praticamente inútil).</h2>
+                <h2>Todas as operações realizadas nos cbits passam pelo CNOT Gate, que exige 2 coisas do cbit:</h2>
+                <h3>• Que possua um par (|10>, |01>, |00|>, etc)</h3>
+                <h3>• Que cada par tenha um bit "Control" e um bit "Target", sendo que o Control é o bit mais a esquerda.</h3>
+                <h2>Ao passar pelo CNOT Gate, o Target bit terá seu valor invertido caso o Control bit seja 1: |10> ao passar pelo CNOT Gate se torna |11>,
+                    |11> se torna |10>.</h2>
+                <h2>Mas caso seja 0, os valores se mantém os mesmos.</h2>
+                <h2>É possivel visualizar esse processo achando o produto tensorial entre as matrizes de cada cbit (que são vetores).</h2>
+                <img src="img1.png">
+            </div> 
             <div class="blank-box"></div>
             <div class="box-left" id="menu5" style="background-color: rgb(175, 102, 19); border-color: rgb(175, 102, 19);">
-                <h1 style="background-color: rgb(175, 102, 19);">Mais artigos:</h1>
+                <h1 style="background-color: rgb(175, 102, 19);">Mais Artigos:</h1>
                 <h2>Quer ler mais sobre isso? Confira:</h2>
                 <a href="https://medium.com/@filipe.chagas/uma-introdu%C3%A7%C3%A3o-%C3%A0-matem%C3%A1tica-da-computa%C3%A7%C3%A3o-qu%C3%A2ntica-22763e797b8d">
                     • Matemática da Computação Quântica
-                </a>
-                <br>
-                <a href="https://brasilescola.uol.com.br/fisica/computacao-quantica.htm">
-                    • O que é e como funciona
                 </a>
                 <br>
                 <a href="https://www.meupositivo.com.br/panoramapositivo/computadores-quanticos/#:~:text=Os%20primeiros%20prot%C3%B3tipos%20de%20computador,de%20processamento%20de%2016%20qubits.">
